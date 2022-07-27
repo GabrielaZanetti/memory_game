@@ -1,0 +1,106 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #A390E4;
+}
+body #pontos {
+  position: absolute;
+  width: 100%;
+  z-index: 9999;
+}
+body #pontos .pontuacao {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  float: right;
+  position: relative;
+  top: 30px;
+  right: 20px;
+  width: 150px;
+  height: 80px;
+  border-radius: 5px;
+  border: 2px solid;
+  border-top-color: #cd0100;
+  border-left-color: #cd0100;
+  box-shadow: 4px 5px 4px rgba(0, 0, 0, 0.46);
+  background-color: #fff;
+}
+body #pontos .pontuacao #pontos-soma {
+  border-radius: 3px;
+  border-bottom: 2px solid #cd0100;
+}
+body .memory-game {
+  height: 640px;
+  width: 640px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  perspective: 1000px;
+}
+body .memory-game .card {
+  height: calc(33.333% - 10px);
+  width: calc(25% - 10px);
+  margin: 5px;
+  position: relative;
+  box-shadow: 4px 5px 4px rgba(0, 0, 0, 0.46);
+  border-radius: 5px;
+  cursor: pointer;
+  transform: scale(1);
+  transform-style: preserve-3d;
+  transition: transform 0.9s;
+}
+body .memory-game .card:active {
+  transform: scale(0.97);
+  transition: transform 0.3s;
+}
+body .memory-game .card .front-card {
+  transform: rotateY(180deg);
+}
+body .memory-game .card .front-card,
+body .memory-game .card .back-card {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  position: absolute;
+  border-radius: 5px;
+  background-color: #fff;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+body .memory-game .card.flip {
+  transform: rotateY(180deg);
+}
+body #ganhou {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.368627451);
+  z-index: 999999999;
+}
+body #ganhou p {
+  color: #fff;
+  font-size: 30px;
+}
+body #ganhou .btn-reload {
+  background-color: #A390E4;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+body #ganhou .btn-reload:hover {
+  background-color: rgba(105, 13, 253, 0.2509803922);
+}
+body #ganhou .btn-reload:focus {
+  box-shadow: 0 0 0 0.25rem rgba(105, 13, 253, 0.2509803922);
+}
