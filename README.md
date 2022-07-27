@@ -1,2 +1,2 @@
-# memory_game
-jogo da memoria do projeto de javascript - DIO
+# Jogo da memória
+Este é o repositorio do jogo da memoria do projeto DIO
